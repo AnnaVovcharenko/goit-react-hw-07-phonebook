@@ -22,7 +22,7 @@ const formSchema = Yup.object().shape({
     .min(3, 'Too Short!')
     .required('This field is required, please fill it'),
     phone: Yup.string()
-    .matches(/^\d{3}\d{2}\d{2}$/, 'Must be in format: 000-000-0000')
+    .matches(/^\d{3}-\d{3}-\d{4}$/, 'Must be in format: 000-000-0000')
     .required('This field is required, please fill it'),
 });
 
