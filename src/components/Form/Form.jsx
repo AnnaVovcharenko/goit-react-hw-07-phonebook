@@ -20,10 +20,10 @@ const formSchema = Yup.object().shape({
   name: Yup.string()
     .matches(/^[a-zA-Z\s]+$/, 'Only letters are allowed')
     .min(3, 'Too Short!')
-    .required('This field is required, please fill that'),
-  number: Yup.string()
-    .matches(/^\d{3}-\d{2}-\d{2}$/, 'Must be in format: 000-000-0000')
-    .required('This field is required, please fill that'),
+    .required('This field is required, please fill it'),
+    phone: Yup.string()
+    .matches(/^\d{3}\d{2}\d{2}$/, 'Must be in format: 000-000-0000')
+    .required('This field is required, please fill it'),
 });
 
 const FormContact = () => {
@@ -42,6 +42,7 @@ const FormContact = () => {
     if (identContactName) {
       return toast.info(`is already in contacts`, 'ok');
     }
+    console.log(name, phone);
     dispatch(addContact(finalContact));
     resetForm();
   };
