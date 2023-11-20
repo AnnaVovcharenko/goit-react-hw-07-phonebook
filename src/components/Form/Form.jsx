@@ -69,7 +69,7 @@ const FormContact = () => {
             <MyField type="tel" name="phone" placeholder="" />
             <ErrorMsg name="phone" component="div" />
           </InputContainer>
-          <ButtonForm type="submit">Add contacu</ButtonForm>
+          <ButtonForm type="submit">Add contact</ButtonForm>
         </MyForm>
       </Formik>
       <ToastContainer />
